@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--This form is for shipping, the first 3 inputs are used to identify the users city, postal code and address; these are 
+    entered through text. Next is a drop down menu which is used to select the shipping method. Then there are three inputs with a 
+    radio type, this is used to select the method of payment. After is the text area which is for any comments a user might have.
+    Then there are two checkboxes which are used for whetherthe user would like email updates or if they would like to save payment 
+    information. After is the submit button which is used to place order. -->
+    <form method="get">
+        <label for="address">Address:</label>
+        <input type="text" name="address" placeholder="Please put your address" size="30" maxlength="100" id="address"/>
+        
+        <label for="postalcode">PostalCode:</label>
+        <input type="text" name="postalcode" placeholder="Please enter your Postal Code" size="20" maxlength="50" id="postalcode"/>
+        
+        <label for="city">City:</label>
+        <input type="text" name="city" placeholder="Please enter your City" size="20" maxlength="100" id="city"/>
+    
+
+        <p><b>Please select a shipping option</b></p>
+        <select name="shippingoptions" id="shipping">
+            <option value="standardshipping">Standard Shipping</option>
+            <option value="onedayship">One Day Shipping</option>
+            <option value="twodayship">Two Day Shipping</option>
+        </select>
+
+
+        <p><b>Select a payment method</b></p>
+        <label><input type="radio" name="payment" value="paypal" checked>PayPal</label>
+        <label><input type="radio" name="payment" value="debit">Debit Card</label>
+        <label><input type="radio" name="payment" value="credit">Credit Card</label>
+        <br/>
+        <br/>
+        
+
+        <p><label for="comments">Comments</label></p>
+        <textarea rows="4" cols="40" name="comments" id="comments">   
+        </textarea>
+
+        <br/>
+        <br/>
+        <br/>
+
+
+        <label><input type="checkbox" name="email" checked>Sign me up for e-mail updates</label>
+        <label><input type="checkbox" name="payment" checked>Save my payment information</label>
+
+        <br/>
+        <br/>
+
+
+        <input type="submit" value="Submit"/>
+    </form>
+
+
+    
+
+</body>
+</html>
